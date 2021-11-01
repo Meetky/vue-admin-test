@@ -1,12 +1,19 @@
+<!--
+ * @Description  : 
+ * @Author       : Concon
+ * @Date         : 2021-10-28 21:50:46
+ * @LastEditors  : Concon
+ * @LastEditTime : 2021-10-30 12:11:46
+ * @FilePath     : \\Projects\\TestPlatform\\VueDemo\\vue-admin-test\\vue-admin-test\\src\\components\\Login\\index.vue
+ * Copyright (C) 2021 Concon. All rights reserved.
+-->
 <template>
   <div class="loginPage">
     <el-card class="box-card">
       <h3>登录页面</h3>
       <el-form label-width="60px">
         <el-form-item label="用户名">
-          <template
-            ><i class="el-icon-edit"></i><el-input v-model="username"></el-input
-          ></template>
+          <el-input v-model="username"></el-input>
         </el-form-item>
         <el-form-item label="密码">
           <el-input type="password" v-model="password"></el-input>
@@ -34,21 +41,12 @@ export default {
     login() {
       axios
         .post(
-          "http://127.0.0.1:8080/backend/user/login/",
+          "http://127.0.0.1:8080/backend/login",
           JSON.stringify({ username: this.username, password: this.password })
         )
         .then(
           (response) => {
-            console.log(this.$router);
             console.log(response.data);
-            if (
-              response.data["message"] === "success" &&
-              response.data["code"] === 200
-            ) {
-              this.$router.push({ path: "/home" });
-            } else {
-              alert("登录失败");
-            }
           },
           (error) => {
             console.log("请求失败", error.message);

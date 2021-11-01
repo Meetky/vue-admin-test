@@ -95,6 +95,7 @@ export default {
   },
 };
 </script>
+
 <style>
 .el-header {
   background-color: #b3c0d1;
