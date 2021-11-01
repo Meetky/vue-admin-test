@@ -7,16 +7,17 @@ module.exports = {
     },
     lintOnSave: false, //关闭语法检查
     //开启代理服务器（方式一）
-    /* devServer: {
-      proxy: 'http://localhost:5000'
-    }, */
+    // devServer: {
+    // proxy: 'http://127.0.0.1:5000'
+    // },
     //开启代理服务器（方式二）
     devServer: {
         proxy: {
-            '/backend': {
-                target: 'http://127.0.0.1:5000',
+            '/api': {
+                target: 'http://localhost:5000',
+                changeOrigin: true,
                 pathRewrite: {
-                    '^/backend': ''
+                    '^/api': ''
                 },
                 // ws: true, //用于支持websocket
                 // changeOrigin: true //用于控制请求头中的host值

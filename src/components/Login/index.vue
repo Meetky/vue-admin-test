@@ -20,7 +20,7 @@
         </el-form-item>
         <el-form-item class="btn">
           <el-button type="primary" @click="login">登录</el-button>
-          <el-button>注册</el-button>
+          <el-button @click="regist">注册</el-button>
         </el-form-item>
       </el-form>
     </el-card>
@@ -41,7 +41,7 @@ export default {
     login() {
       axios
         .post(
-          "http://127.0.0.1:8080/backend/login",
+          "/api/login/",
           JSON.stringify({ username: this.username, password: this.password })
         )
         .then(
@@ -52,6 +52,16 @@ export default {
             console.log("请求失败", error.message);
           }
         );
+    },
+    regist() {
+      axios.get("/api/login/").then(
+        (response) => {
+          console.log(response.data);
+        },
+        (error) => {
+          console.log("请求失败", error.message);
+        }
+      );
     },
   },
 };
