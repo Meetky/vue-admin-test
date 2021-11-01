@@ -1,29 +1,27 @@
 <template>
   <el-container>
-    <el-header><Header></Header></el-header>
+    <el-aside><Navigation></Navigation></el-aside>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-container>
-        <el-main>Main</el-main>
-      </el-container>
+      <el-header><Header></Header></el-header>
+      <el-main>Main</el-main>
     </el-container>
-    <el-footer>Footer</el-footer>
   </el-container>
 </template>
 
 <script>
 import Header from "./Header.vue";
+import Navigation from "./Navigation.vue";
 export default {
   name: "Home",
   components: {
     Header,
+    Navigation,
   },
 };
 </script>
 
 <style>
-.el-header,
-.el-footer {
+.el-header {
   background-color: #b3c0d1;
   color: #333;
   text-align: center;
@@ -33,7 +31,6 @@ export default {
 .el-aside {
   background-color: #d3dce6;
   color: #333;
-  text-align: center;
   line-height: 200px;
 }
 
@@ -42,6 +39,8 @@ export default {
   color: #333;
   text-align: center;
   line-height: 160px;
+  _height: 200px;
+  min-height: 200px;
 }
 
 body > .el-container {
