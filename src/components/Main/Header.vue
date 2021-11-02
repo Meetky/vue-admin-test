@@ -1,6 +1,12 @@
 <template>
   <el-row>
-    <el-col><div class="grid-content bg-purple">Hello</div></el-col>
+    <el-col>
+      <div class="grid-content bg-purple">
+        <el-select v-model="value" placeholder="">
+          <el-option placeholder="退出"> </el-option>
+        </el-select>
+      </div>
+    </el-col>
   </el-row>
 </template>
 
@@ -13,13 +19,13 @@ export default {
 <style>
 /* .el-row {
   margin-bottom: 20px;
-} */
-/* .el-col {
+}
+.el-col {
   border-radius: 4px;
 } */
 
 .bg-purple {
-  background: #092f61;
+  background: #b3c0d1;
 }
 
 .grid-content {

@@ -13,16 +13,17 @@ export default {
 
 <style>
 #app {
-  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* color: #2c3e50; */
-  /* margin-top: 60px; */
 }
-html {
+
+html,
+body,
+#app,
+.el-container {
+  padding: 0px;
+  margin: 0px;
   height: 100%;
-  box-sizing: border-box;
 }
 </style>

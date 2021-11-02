@@ -38,11 +38,8 @@ export default {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
-  _height: 200px;
-  min-height: 200px;
 }
-
+/* 
 body > .el-container {
   margin-bottom: 40px;
 }
@@ -54,5 +51,5 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
-}
+} */
 </style>

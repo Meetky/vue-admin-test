@@ -1,5 +1,5 @@
 <template>
-  <el-container style="border: 1px solid #eee">
+  <el-container class="con" style="border: 1px solid #eee">
     <el-aside>
       <el-menu>
         <el-submenu index="1">
@@ -35,5 +35,10 @@ export default {
 
 .el-aside {
   color: #333;
+}
+.con {
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 </style>
