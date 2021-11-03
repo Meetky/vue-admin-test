@@ -1,21 +1,23 @@
 <template>
   <el-container>
-    <el-aside><Navigation></Navigation></el-aside>
-    <el-container>
+    <div style="float: left">
+      <Aside></Aside>
+    </div>
+    <div class="main" style="float: left">
       <el-header><Header></Header></el-header>
       <el-main>Main</el-main>
-    </el-container>
+    </div>
   </el-container>
 </template>
 
 <script>
 import Header from "./Header.vue";
-import Navigation from "./Navigation.vue";
+import Aside from "./Aside.vue";
 export default {
   name: "Home",
   components: {
     Header,
-    Navigation,
+    Aside,
   },
 };
 </script>
@@ -23,16 +25,25 @@ export default {
 <style>
 .el-header {
   background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+  padding: 0px;
+  height: 50px;
+}
+.main {
+  position: static;
+  height: 100%;
+  width: 100%;
+}
+.main > .el-main {
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
-.el-aside {
+/* .el-aside {
   background-color: #d3dce6;
   color: #333;
   line-height: 200px;
-}
+} */
 
 .el-main {
   background-color: #e9eef3;

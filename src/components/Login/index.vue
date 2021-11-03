@@ -80,14 +80,13 @@ export default {
       axios.get("/api/login/").then(
         (response) => {
           console.log(response.data);
+          this.$message.error("还不支持注册噢");
         },
         (error) => {
           console.log("请求失败", error.message);
+          this.$message.error("还不支持注册噢");
         }
       );
-    },
-    open4() {
-      this.$message.error("错了哦，这是一条错误消息");
     },
   },
 };
@@ -107,7 +106,7 @@ export default {
     margin: 0 auto;
     border: 0px;
     margin-top: 230px;
-    background: #b3c0d1;
+    background: Transparent;
     span {
       float: right;
     }
